@@ -1,0 +1,35 @@
+header 
+{
+    margin:50px;
+    width: 180px;
+    background-color: aqua;
+    
+}
+body
+{
+    background-color: rgb(138, 211, 138);
+}
+table
+{
+    background-color: rgb(253, 138, 196);
+    text-align: center;
+}
+h1,h2,h3,h4,h5,h6
+{
+    text-shadow: midnightblue;
+}
+h2
+{
+    text-align: center;
+}
+.wall
+{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+footer
+{
+    bottom: 0;
+    left: 40%;
+    text-align: center;
+}
