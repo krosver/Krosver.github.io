@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .elem
+        {
+            width: 25px;
+            margin: 5px;
+        }
+    </style>
+    <script>
+        let array=[];
+        let max=0;
+        function draw()
+        {
+            max=parseInt(array[0].value,10);
+            let Draw = document.getElementById("canvas");
+            let g =Draw.getContext("2d");
+            for (i=0;i<array.length,10;i++)
+            {
+                if (max<array[i].value)
+                {
+                    max=array[i].value;
+                }
+            }
+            for(i=0;i<array.length;i++)
+            {
+                g.fillStyle = "green";
+                g.fillRect(15*(i+1), max, 7, -array[i].value);
+                
+            }
+            console.log("max "+max);
+        }
+        function ceratuer()
+        {
+            let number=(document.getElementById("num").value);
+            for (i = 0; i<number;i++)
+            {
+                elem = document.createElement("input");
+                elem.type="text"
+                elem.className="elem";
+                array.push(elem); 
+                document.getElementById("TextFiled").appendChild(elem)
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <input type="text" id ="num">
+        <button onclick="ceratuer()">Сколько полей</button>
+        <button onclick="draw()">Диаграмма</button>
+        <div id="TextFiled">
+
+        </div>
+        <canvas id="canvas">
+
+        </canvas>
+    </div>
+</body>
+</html>

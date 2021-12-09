@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function CheckForm()
+        {
+
+        }
+    </script>
+</head>
+<style>
+header,footer
+{
+    background-color: orange;
+    height: 50px;
+}
+.shab
+{
+    border-radius: 50px;
+    border: solid 2px red;
+    max-width: 400px;
+    margin:auto;
+    padding: 5%;
+}
+select
+{
+    width: 100px;
+    height: 20px;
+}
+.lb_text
+{
+    display: grid;
+    grid-template-columns: 1fr,1fr;
+    grid-template-rows: 1fr, 1fr,1fr;
+    min-width: 180px;
+    grid-template-areas: 
+    "d1 d2"
+    "d3 d4"
+    "d5 d6"
+    ;
+}
+        .d1
+        {
+            grid-area: d1;
+            margin: 10px 0px;
+        }
+        .d2
+        {
+            grid-area: d2;
+            margin: 10px 0px;
+        }
+        .d3
+        {
+            grid-area: d3;
+            margin: 10px 0px;
+        }
+        .d4
+        {
+            grid-area: d4;
+            margin: 10px 0px;
+        }
+        .d5
+        {
+            grid-area: d5;
+            margin: 10px 0px;
+        }
+        .d6
+        {
+            grid-area: d6;
+            margin: 10px 0px;
+        }
+.border
+{
+    border-radius: 20px;
+    background-color: orange;
+    margin-left: 10px;
+}
+.button_f
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+button
+{    
+    border-radius: 20px;
+    background-color: orange;
+}
+.firstqu
+{
+    display: flex;
+    flex-direction: column;
+}
+</style>
+
+<body>
+    <header>
+    <h1>Эта форма</h1>
+    </header>
+    <div class = "shab">
+        <form action="javascript: CheckForm()" name="New_Contacts">
+            <div class = "firstqu">
+                <h4>Как вам удобно получить ответ:</h4>
+                <label for="text">
+                <input id ="mail" name="text" type="radio">по почте </label><br>
+                <label for="text">
+                <input id="phone" name="text" type="radio">по телефону</label><br>
+                <label for="text">
+                <input id="not_recive" name="text" type="radio">не получать</label><br>
+            </div>
+            <div>
+                <h4>Укажите тему вопроса:</h4>
+                <select class="border">
+                    <option>Работа</option>
+                    <option>Учеба</option>
+                </select>
+            </div>
+            <div>
+                <h4>И еще один вопрос</h4>
+                <label for="tak"> <input type="checkbox" name="tak" id="1"> может так?</label> <br>
+                <label for="tak"> <input type="checkbox" name="tak" id="1"> или так? </label><br>
+                <label for="tak"><input type="checkbox" name="tak" id="1"> иначе</label><br>
+            </div>
+            <div class = "lb_text">
+                <label class="d1" for="nm1">Ваше имя: </label>
+                <input type="text" name="name" id="nm1" class="border d2">
+                <label class="d3" for="nm2"> Ваша почта: </label>
+                <input type="text" name="name" id="nm2" class="border d4">
+                <label class="hidden" class="d5" for="nm3"> Номер телефона: </label>
+                <input type="text" name="name" id="nm3" class="border d6">
+            </div>
+            <div>
+                <h4>Ваш вопрос:</h4>
+                <textarea name="question" id="" cols="30" rows="10"></textarea>
+            </div>
+                
+            <div class="button_f">
+                <button>Отправить вопрос</button>
+            </div>
+
+        </form>
+    </div>
+    <footer>
+        <h4>Веб-технологии, задание 2</h4>
+    </footer>
+</body>
+</html>

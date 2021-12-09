@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid</title>
+    <style>
+        body
+        {
+            margin: 0px;
+            padding: 0px;
+        }
+        .grig-container
+        {
+            display: grid;
+            grid-template-rows: 2fr 1fr 1fr 1fr ;
+            grid-template-columns: 3fr 3fr 3fr 1fr;
+            grid-template-areas: 
+            "d1 d1 d2 d8"
+            "d1 d1 d3 d8"
+            "d4 d5 d5 d8"
+            "d6 d7 d9 d8"
+            ;
+            height: 100vh;
+        }
+        .background_red
+        {
+            background-color: yellow;
+            margin: 5px;
+            padding: 0px 10px;
+        }
+        .d1
+        {
+            grid-area: d1;
+        }
+        .d2
+        {
+            grid-area: d2;
+        }
+        .d3
+        {
+            grid-area: d3;
+        }
+        .d4
+        {
+            grid-area: d4;
+        }
+        .d5
+        {
+            grid-area: d5;
+        }
+        .d6
+        {
+            grid-area: d6;
+        }
+        .d7
+        {
+            grid-area: d7;
+        }
+        .d8
+        {
+            grid-area: d8;
+        }
+        .d9
+        {
+            grid-area: d9;
+        }
+    </style>
+</head>
+    <body>
+        <div class= "grig-container">
+            <div class="d1 background_red">  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Nulla maxime, quod enim, dolore consequatur distinctio ea culpa iste necessitatibus cum impedit porro iusto, 
+                et voluptates recusandae neque! Dolorum, quam laudantium. 
+            </div>
+            <div class="d2 background_red">   </div>
+            <div class="d3 background_red">   </div>
+            <div class="d4 background_red">   </div>
+            <div class="d5 background_red">   </div>
+            <div class="d6 background_red">   </div>
+            <div class="d7 background_red">   </div>
+            <div class="d8 background_red">   </div>
+            <div class="d9 background_red">   </div>
+        </div>
+    </body>
+
+</html>

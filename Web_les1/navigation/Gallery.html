@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <Style>
+        .border-img
+        {    
+            border: 4px;
+            border-style:outset;
+            border-color: aqua;
+        }
+    </Style>
+    <script>
+        a=1;
+        img=1;
+        function Auto_start()
+        {
+            TimerId = setInterval("Auto()", 2000);
+        }
+        function Auto_stop()
+        {
+            clearTimeout(TimerId);
+        }
+        function Auto()
+        {
+            smena(a);
+            if (a == 3)
+            {
+                a = 0;   
+            }
+            a = a + 1;
+                
+        }
+        function smena(a)
+        {
+            document.images[0].src= document.images[a].src;
+            document.images[img].classList.remove("border-img");
+            document.images[a].classList.add("border-img");
+            img=a;
+        }
+
+    </script>
+</head>
+<body>
+    <img src="../Images/enot.jpg" width="410" alt=""><br>
+    <img src="../Images/enot.jpg" width="132" alt="img1" onclick="smena('1')" class="border-img">
+    <img src="../Images/kotenok.jpg" width="132" alt="img2" margin-left:2 onclick="smena('2')" class>
+    <img src="../Images/schenok.jpg" width="132" alt="img3" margin-left:2 onclick="smena('3')" class><br>
+    <button onclick="Auto_start()">Auto</button>
+    <button onclick="Auto_stop()">Stop</button>
+</body>
+</html>

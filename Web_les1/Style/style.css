@@ -1,13 +1,23 @@
 header 
 {
-    margin:50px;
     width: 180px;
     background-color: aqua;
     
 }
-body
+
+
+.firstpage
 {
-    background-color: rgb(138, 211, 138);
+    background-color:white;
+    margin-top: 100px;
+    margin-left: 2%;
+    text-align: left;
+    font-family: Сomic Sans MS;
+    font-size: 150%;
+    min-height:300px ;
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 table
 {
@@ -20,16 +30,86 @@ h1,h2,h3,h4,h5,h6
 }
 h2
 {
-    text-align: center;
-}
-.wall
-{
-    max-width: 1000px;
-    margin: 0 auto;
+    text-align: left;
 }
 footer
 {
     bottom: 0;
     left: 40%;
     text-align: center;
+}
+.backgr
+{
+    background-color: black;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.menu
+{
+    list-style-image: url("../Images/Line.png");
+}
+.menu_ul
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.menu_li
+{
+    min-width: 150px;
+}
+a 
+{
+    text-decoration:none; /*убираем подчеркивание текста ссылок*/
+    color:white ;
+    vertical-align: middle;
+}
+
+.rightimg  
+{
+    float: right;
+}
+.nameComp
+{
+    font-family:Сomic Sans MS;
+    padding: 50px 1px 10px;
+    text-align: center;
+    font-weight: bold;
+     font-size: 150%;
+}
+.twopage
+{
+    color: white;
+    margin-top: 50px;
+    margin-left: 2%;
+    text-align: left;
+    font-family:Сomic Sans MS;
+    min-height:300px ;
+    font-size: 120%;
+    background-color: black;
+}
+.imggor
+{
+    margin-top: 50px;
+    float:left;
+    display: grid;
+    min-width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.center
+{
+    margin: auto;
+}
+.threepage
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.fourpage
+{
+    background-color: black;
+    min-height: 300px;
+    color: white;
 }
