@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--meta name="viewport" content="width=device-width, initial-scale=1.0"-->
+    <title>Contacts</title>
+    <link rel="stylesheet" type="text/css" href="../all/style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul class="ul_head"> 
+            <a href="../all/main.html" class="img"><img src="../all/img/img_1.png" alt="20px" width="100"></a>
+            <li class="li_head">
+                <a class="a_head" href="../all/Competence.html"> 
+                    Сompetence
+                </a>
+            </li>
+            <li class="li_head">
+                <a class="a_head" href="../all/Resume.html">
+                    Resume
+                </a>
+            </li>
+            <li class="li_head">
+                <a class="a_head" href="../all/porfolio.html">
+                    Portfolio
+                </a>
+            </li>
+            <li class="li_head">
+                <a class="a_head" href="../all/contacts.html">
+                    Contacts
+                </a>
+            </li>
+            <li class="li_head">
+                <a class="a_head" href="../all/Grid.html">
+                    Grid
+                </a>
+            </li>
+            <li class="li_head">
+                <a class="a_head" href="../all/js.html">
+                    Js
+                </a>
+            </li>
+        </ul>   
+    </nav>
+    <div class="backgr">    
+        <h1 class="head_h1">Веб-Технологии</h1>
+        <h3 class="head_h3">Университет "Дубна"</h3>
+    </div>
+</header>
+
+    <main>   
+        <div class = "shab">
+            <form action="javascript: CheckForm()" name="New_Contacts">
+                <div class = "firstqu">
+                    <h4>Как вам удобно получить ответ:</h4>
+                    <label for="text">
+                    <input id ="mail" name="text" type="radio">по почте </label><br>
+                    <label for="text">
+                    <input id="phone" name="text" type="radio">по телефону</label><br>
+                    <label for="text">
+                    <input id="not_recive" name="text" type="radio">не получать</label><br>
+                </div>
+                <div>
+                    <h4>Укажите тему вопроса:</h4>
+                    <select class="border">
+                        <option>Работа</option>
+                        <option>Учеба</option>
+                    </select>
+                </div>
+                <div>
+                    <h4>И еще один вопрос</h4>
+                    <label for="tak"> <input type="checkbox" name="tak" id="1"> может так?</label> <br>
+                    <label for="tak"> <input type="checkbox" name="tak" id="1"> или так? </label><br>
+                    <label for="tak"><input type="checkbox" name="tak" id="1"> иначе</label><br>
+                </div>
+                <div class = "lb_text">
+                    <label class="d1" for="nm1">Ваше имя: </label>
+                    <input type="text" name="name" id="nm1" class="border d2">
+                    <label class="d3" for="nm2"> Ваша почта: </label>
+                    <input type="text" name="name" id="nm2" class="border d4">
+                    <label class="hidden" class="d5" for="nm3"> Номер телефона: </label>
+                    <input type="text" name="name" id="nm3" class="border d6">
+                </div>
+                <div>
+                    <h4>Ваш вопрос:</h4>
+                    <textarea name="question" id="" cols="30" rows="10"></textarea>
+                </div>
+                    
+                <div class="button_f">
+                    <button>Отправить вопрос</button>
+                </div>
+    
+            </form> 
+    </main>
+
+    <footer>
+        <div >                
+            <a href="https://vk.com/">
+                <img src="../all/img/vk.png" alt="VK" width="40">
+            </a>
+            <a href="https://www.facebook.com/">
+                <img src="../all/img/Facebook.png" alt="VK" width="40">
+            </a>
+         </div>
+        <div>Cайт разработан ФИ, Copyright © 2021 </div>
+
+    </footer>
+</body>
+</html>
