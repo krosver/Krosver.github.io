@@ -340,7 +340,7 @@ select
 }
 .mail
 {
-    width: 60%;
+    width: 40%;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -362,4 +362,22 @@ select
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
+}
+.basket_menu
+{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;   
+    margin-bottom: 20px; 
+}
+.basket
+{
+    width: 20%;
+    margin:auto;
+    border: 1px solid rgb(0, 26, 255);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    flex-direction: column; 
 }

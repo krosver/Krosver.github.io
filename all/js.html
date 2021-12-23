@@ -165,6 +165,21 @@
                 <button onclick="Auto_stop()">Stop</button>
             </div>
         </div>
+
+        <div>
+            <button onclick="hide('six')"> Скрыть / показать блок</button>
+            <div id="six" class="block">
+                <div class="basket_menu"> 
+                    <img src="../all/img/gold.jpg" draggable="true" ondragstart="drag(event)" width="100px" id="gold" alt="">
+                    <img src="../all/img/silver.jpeg" draggable="true" ondragstart="drag(event)" width="100px" id="silver" alt="">
+                </div>
+                <div class="basket" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <p>Золото :</p> <p id="gold_count"> 0 </p>
+                    <p>Серебро :</p> <p id="silver_count"> 0 </p>
+                </div>
+            </div>
+        </div>
+        
     </main>
 
     <footer>

@@ -61,3 +61,29 @@ function ceratuer()
         document.getElementById("TextFiled").appendChild(elem)
     }
 }
+function allowDrop(ev) 
+{
+    ev.preventDefault();
+}
+  
+function drag(ev)
+{
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+Gold_count=0;
+Silver_count=0; 
+function drop(ev) 
+{
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (data == "gold")
+    {
+        Gold_count= Gold_count+1;
+        document.getElementById("gold_count").innerHTML=Gold_count;
+    }
+    if (data == "silver")
+    {
+        Silver_count= Silver_count+1;
+        document.getElementById("silver_count").innerHTML=Silver_count;
+    }
+}
