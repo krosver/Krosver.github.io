@@ -6,15 +6,60 @@
     <title>JS</title>
     <link rel="stylesheet" type="text/css" href="../all/style.css">
     <script>
+        flag = true;
         function hide (a)
         {
-            let elem = document.getElementById(a);
-            document.getElementById(a).hidden=true;
-            console.log(a);
+            if (flag==true)
+            {
+                console.log("1",flag);
+                let elem = document.getElementById(a);
+                document.getElementById(a).hidden=true;
+                flag=false;
+                console.log("2",flag);
+            }
+            else
+            {
+                console.log("a",flag);
+                let elem = document.getElementById(a);
+                document.getElementById(a).hidden=false;
+                flag=true;
+                console.log("b",flag);
+            }
+
+        }
+        function SendMail()
+        {
+            name = document.getElementById("name_mail").value;
+            suname = document.getElementById("suname_mail").value;
+            mail = document.getElementById("mail").value;
+            gender = document.getElementById("gender").value;
+            check = document.getElementById("mail_check").checked;
+            if (check==true)
+            {
+
+            }
+            console.log("check ", check);
+
+        }
+        theme=true;
+        function change_theme()
+        {
+            if (theme==true)
+            {
+                document.getElementById("body_c").classList.add("main_change");
+                document.getElementById("main_c").classList.add("main_change");
+                theme=false;
+            }
+            else
+            {
+                document.getElementById("body_c").classList.remove("main_change");
+                document.getElementById("main_c").classList.remove("main_change");
+                theme=true;
+            }
         }
     </script>
 </head>
-<body>
+<body id="body_c">
 
 <header>
     <nav>
@@ -58,16 +103,67 @@
     </div>
 </header>
 
-    <main class="main_margin">  
-        <button onclick="hide('first')"> Скрыть блок</button>
-        <div id="first" class="block">
+<script src="../all/sript.js"></script>
 
+    <main id="main_c" class="main_margin">
+        <div>
+            <button onclick="hide('first')"> Скрыть / показать блок</button>
+            <div id="first" class="block">
+                <input type="text" id ="num">
+                <button onclick="ceratuer()">Сколько полей</button>
+                <button onclick="draw()">Диаграмма</button>
+                <div id="TextFiled">
+        
+                </div>
+                <canvas id="canvas" class="graph">
+        
+                </canvas>
+            </div>
+        </div>  
+
+        <div>
+            <button onclick="hide('two')"> Скрыть / показать блок</button>
+            <div id="two" class="block">
+                <div class="mail" style="margin-top: 20px" >
+                    Имя <input id="name_mail" type="text"> 
+                    Фамилия <input id="suname_mail" type="text">
+                    Почта <input id="mail" type="text"> 
+                    <input id="mail_check" type="checkbox"> Отправить письмо
+                    <label for="gender">  Пол </label>
+                    <select name="gender" id="gender">
+                        <option >Мужской </option>
+                        <option >Женский </option>
+                    </select>
+                    <button id="btn" onclick="SendMail()">Отправить</button>
+                </div>
+            </div>
         </div>
-        <div class="block">
 
+        <div>
+            <button onclick="hide('tree')"> Скрыть / показать блок</button>
+            <div id="tree" class="block">
+                <button id="theme" onclick="change_theme()"> Тема </button>
+            </div>
         </div>
-        <div class="block">
 
+        <div>
+            <button onclick="hide('four')"> Скрыть / показать блок</button>
+            <div id="four" class="block">
+                <img src="../all/img/img_1.png" alt="" width="300px"> <br>
+                <p class="text_no">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ducimus accusantium facere molestiae itaque at consequatur recusandae suscipit quas? Molestias ullam veritatis cum dolores ipsa, vel labore ipsum asperiores iure.</p> 
+            </div>
+        </div>
+
+        <div>
+            <button onclick="hide('five')"> Скрыть / показать блок</button>
+            <div id="five" class="block">
+                <img src="../all/img/enot.jpg" width="410" id="main_img" alt=""><br>
+                <img src="../all/img/enot.jpg" width="132" id="1" onclick="smena('1')" class="border-img">
+                <img src="../all/img/kotenok.jpg" width="132" id="2" margin-left:2 onclick="smena('2')" class>
+                <img src="../all/img/schenok.jpg" width="132" id="3" margin-left:2 onclick="smena('3')" class><br>
+                <button onclick="Auto_start()">Auto</button>
+                <button onclick="Auto_stop()">Stop</button>
+            </div>
         </div>
     </main>
 

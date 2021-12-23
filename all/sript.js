@@ -1,4 +1,3 @@
-<script>
 a=1;
 img=1;
 function Auto_start()
@@ -21,10 +20,44 @@ function Auto()
 }
 function smena(a)
 {
-    document.images[0].src= document.images[a].src;
-    document.images[img].classList.remove("border-img");
-    document.images[a].classList.add("border-img");
+    document.getElementById("main_img").src= document.getElementById(a).src;
+    document.getElementById(img).classList.remove("border-img");
+    document.getElementById(a).classList.add("border-img");
     img=a;
 }
 
-</script>
+let array=[];
+let max=0;
+function draw()
+{
+    max=parseInt(array[0].value,10);
+    let Draw = document.getElementById("canvas");
+    let g =Draw.getContext("2d");
+    g.clearRect(0, 0, canvas.width, canvas.height)
+    for (i=0;i<array.length;i++)
+    {
+        if (max<parseInt(array[i].value,10))
+        {
+            max=parseInt(array[i].value,10);
+        }
+    }
+    for(i=0;i<array.length;i++)
+    {
+        g.fillStyle = "green";
+        g.fillRect(15*(i+1), max, 7, -array[i].value);
+        
+    }
+    console.log("max "+max);
+}
+function ceratuer()
+{
+    let number=(document.getElementById("num").value);
+    for (i = 0; i<number;i++)
+    {
+        elem = document.createElement("input");
+        elem.type="text"
+        elem.className="elem";
+        array.push(elem); 
+        document.getElementById("TextFiled").appendChild(elem)
+    }
+}
