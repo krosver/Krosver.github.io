@@ -87,3 +87,17 @@ function drop(ev)
         document.getElementById("silver_count").innerHTML=Silver_count;
     }
 }
+function set_local_text()
+{
+    log=document.getElementById("log_in").value;
+    text=document.getElementById("text_ar").value;
+    localStorage.setItem(log,text);
+    
+}
+function get_local_text()
+{
+    log=document.getElementById("log_in").value;
+    text=document.getElementById("text_ar");
+    text.innerHTML=localStorage.getItem(log);
+    console.log(localStorage.getItem(log));
+}

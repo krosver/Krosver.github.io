@@ -179,6 +179,22 @@
                 </div>
             </div>
         </div>
+
+        <div>
+            <button onclick="hide('seven')"> Скрыть / показать блок</button>
+            <div id="seven" class="block">
+                LocalStoreg <br>
+                <label for="log_in"> Ваш ключ
+                <input id="log_in" type="text"> </label><br>
+                <label for="text_ar"> Ваш тескт <br>
+                    <textarea name="text" id="text_ar" cols="30" rows="10"></textarea>
+                </label>
+                <button onclick="set_local_text()">Занести текст </button>
+                <button onclick="get_local_text()">Получить текст по ключу </button>
+
+            </div>
+        </div>
+
         
     </main>
 
